@@ -1,12 +1,9 @@
 from selenium import webdriver
-import time
-
 
 driver = webdriver.Firefox()
 try:
     # open tic tac toe index page
     driver.get('http://localhost:3000/')
-    time.sleep(2)
 
     # check the game board has a 3*3 empty squares
     squares = driver.find_elements_by_class_name('square')
